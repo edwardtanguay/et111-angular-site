@@ -4,10 +4,14 @@
 		 class="supertitle">please read</div>
 	<div class="title">{{title}}</div>
 	<div class="body">{{body}}</div>
-	<hr />
-	<div [ngSwitch]="status" class="devInfo">
-		<span *ngSwitchCase="'danger'">This info-box warns a user.</span>
-		<span *ngSwitchCase="'success'">Success is displayed when no action is required.</span>
-		<span *ngSwitchDefault>Unknown status code: {{status}}</span>
+	<div><button (click)="showDevInfo = !showDevInfo">Toggle dev info</button></div>
+	<div *ngIf="showDevInfo">
+		<hr />
+		<div [ngSwitch]="status"
+			 class="devInfo">
+			<span *ngSwitchCase="'danger'">This info-box warns a user.</span>
+			<span *ngSwitchCase="'success'">Success is displayed when no action is required.</span>
+			<span *ngSwitchDefault>Unknown status code: {{status}}</span>
+		</div>
 	</div>
 </div>

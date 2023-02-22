@@ -11,6 +11,7 @@ export class InfoBoxComponent {
 	@Input() status = '';
 
 	color = '';
+	showDevInfo = false;
 
 	ngOnInit() {
 		this.color = this.status === 'danger' ? 'red' : 'green';

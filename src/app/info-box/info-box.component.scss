@@ -1,0 +1,17 @@
+.card {
+	background-color: rgb(17, 60, 45);
+	padding: 1rem;
+	border: 1px solid yellow;
+	border-radius: .4rem;
+	width: 20rem;
+	margin-bottom: 1rem;
+
+	.title {
+		font-size: 2rem;
+	}
+
+	.body {
+		font-style: italic;
+		color: #999;
+	}
+}

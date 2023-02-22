@@ -9,9 +9,11 @@ export class InfoBoxComponent {
 	@Input() title = 'Info';
 	@Input() body = '(Watch this space...)';
 	@Input() status = '';
+	@Input() highlight = '';
 
 	color = '';
 	showDevInfo = false;
+	isHighlighted = false;
 
 	handleDevInfoButtonClick = () => {
 		this.showDevInfo = !this.showDevInfo;
@@ -20,6 +22,7 @@ export class InfoBoxComponent {
 
 	ngOnInit() {
 		this.color = this.status === 'danger' ? 'red' : 'green';
+		this.isHighlighted = this.highlight === 'true';
 	}
 
 }

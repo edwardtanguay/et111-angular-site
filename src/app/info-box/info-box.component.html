@@ -4,7 +4,7 @@
 		 class="supertitle">please read</div>
 	<div class="title">{{title}}</div>
 	<div class="body">{{body}}</div>
-	<div><button (click)="showDevInfo = !showDevInfo">Toggle dev info</button></div>
+	<div><button (click)="handleDevInfoButtonClick()">Toggle dev info</button></div>
 	<div *ngIf="showDevInfo">
 		<hr />
 		<div [ngSwitch]="status"

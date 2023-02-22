@@ -13,6 +13,11 @@ export class InfoBoxComponent {
 	color = '';
 	showDevInfo = false;
 
+	handleDevInfoButtonClick = () => {
+		this.showDevInfo = !this.showDevInfo;
+		console.log(`button for info-box "${this.title}" clicked`);
+	}
+
 	ngOnInit() {
 		this.color = this.status === 'danger' ? 'red' : 'green';
 	}

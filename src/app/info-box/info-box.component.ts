@@ -14,6 +14,7 @@ export class InfoBoxComponent {
 	color = '';
 	showDevInfo = false;
 	isHighlighted = false;
+	buttonIsDisabled = false;
 
 	handleDevInfoButtonClick = () => {
 		this.showDevInfo = !this.showDevInfo;

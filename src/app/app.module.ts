@@ -8,6 +8,7 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
 import { HomeComponent } from './home/home.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { InfoComponent } from './info/info.component';
+import { NumtonamePipe } from '../lib/numtoname.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InfoComponent } from './info/info.component';
     TopMenuComponent,
     HomeComponent,
     EmployeesComponent,
-    InfoComponent
+    InfoComponent,
+    NumtonamePipe
   ],
   imports: [
     BrowserModule,

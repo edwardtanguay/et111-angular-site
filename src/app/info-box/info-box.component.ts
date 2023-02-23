@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
 	templateUrl: './info-box.component.html',
 	styleUrls: ['./info-box.component.scss']
 })
+
 export class InfoBoxComponent {
 	@Input() title = 'Info';
 	@Input() body = '(Watch this space...)';

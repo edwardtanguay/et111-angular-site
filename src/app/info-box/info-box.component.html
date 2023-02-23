@@ -4,7 +4,11 @@
 		 class="supertitle">please read</div>
 	<div class="title">{{title}}</div>
 	<div class="body">{{body}}</div>
-	<div><button (click)="handleDevInfoButtonClick()" [disabled]="buttonIsDisabled">Toggle dev info</button></div>
+	<div><input
+  type="checkbox"
+  [checked]="!buttonIsDisabled"
+  (change)="buttonIsDisabled = !buttonIsDisabled"/>
+  <button (click)="handleDevInfoButtonClick()" [disabled]="buttonIsDisabled">Toggle dev info</button></div>
 	<div *ngIf="showDevInfo">
 		<hr />
 		<div [ngSwitch]="status"

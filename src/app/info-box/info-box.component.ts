@@ -14,7 +14,7 @@ export class InfoBoxComponent {
 	color = '';
 	showDevInfo = false;
 	isHighlighted = false;
-	buttonIsDisabled = false;
+	buttonIsDisabled = true;
 
 	handleDevInfoButtonClick = () => {
 		this.showDevInfo = !this.showDevInfo;
@@ -25,5 +25,7 @@ export class InfoBoxComponent {
 		this.color = this.status === 'danger' ? 'red' : 'green';
 		this.isHighlighted = this.highlight === 'true';
 	}
+
+
 
 }

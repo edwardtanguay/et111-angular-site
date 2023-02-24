@@ -1,6 +1,6 @@
 <p *ngIf="searchText === ''">There are {{employees.length}} employees:</p>
 <p *ngIf="searchText !== ''">Searching for "{{searchText}}"...</p>
-<input type="text" [(ngModel)]="searchText"/>
+<input type="text" [(ngModel)]="searchText" autofocus/>
 <div *ngFor="let emp of employees">
 	<div class="employee" *ngIf="employeeHasSearchText(emp)">
 		<div class="fullName">{{emp.firstName}} {{emp.lastName}}</div>

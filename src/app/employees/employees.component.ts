@@ -10,6 +10,7 @@ import axios from 'axios';
 export class EmployeesComponent {
 
 	employees: IEmployee[] = [];
+	searchText: string = '';
 
 	constructor() {
 		(async () => {
@@ -24,18 +25,10 @@ export class EmployeesComponent {
 			})
 
 		})();
+	}
 
-		// this.employees = [
-		// 	{
-		// 		firstName: "Frank",
-		// 		lastName: "Holander",
-		// 		notes: "These are Frank's notes."
-		// 	},
-		// 	{
-		// 		firstName: "Selma",
-		// 		lastName: "Schmidt",
-		// 		notes: "These are Selma's notes."
-		// 	}
-		// ];
+	employeeHasSearchText(emp: IEmployee): boolean {
+		const bulkText = emp.firstName + '|' + emp.lastName + '|' + emp.notes;
+		return bulkText.toLowerCase().includes(this.searchText.toLowerCase());
 	}
 }

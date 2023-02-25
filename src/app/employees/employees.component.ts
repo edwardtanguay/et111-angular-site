@@ -31,4 +31,5 @@ export class EmployeesComponent {
 		const bulkText = emp.firstName + '|' + emp.lastName + '|' + emp.notes;
 		return bulkText.toLowerCase().includes(this.searchText.toLowerCase());
 	}
+
 }

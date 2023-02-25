@@ -1,9 +1,12 @@
 <p *ngIf="searchText === ''">There are {{employees.length}} employees:</p>
 <p *ngIf="searchText !== ''">Searching for "{{searchText}}"...</p>
 <input type="text" [(ngModel)]="searchText" autofocus/>
-<div *ngFor="let emp of employees">
-	<div class="employee" *ngIf="employeeHasSearchText(emp)">
-		<div class="fullName">{{emp.firstName}} {{emp.lastName}}</div>
+<ng-container *ngFor="let emp of employees; index as i; first as isFirst; last as isLast; odd as isOdd; even as isEven">
+	<div class="employee" *ngIf="employeeHasSearchText(emp)" [ngStyle]="{'background-color': isOdd ? '#555' : '#444'}">
+		<div class="fullName">{{i + 1}}. {{emp.firstName}} {{emp.lastName}} 
+			<span *ngIf="isFirst" style="color: lightgreen"> - the first one</span>
+			<span *ngIf="isLast" style="color: red"> - the last one</span>
+		</div>
 		<div class="notes">{{emp.notes}}</div>
 	</div>
-</div>
+</ng-container>

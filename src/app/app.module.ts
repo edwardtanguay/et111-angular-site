@@ -11,6 +11,8 @@ import { InfoComponent } from './info/info.component';
 import { NumtonamePipe } from '../shared/numtoname.pipe';
 import { FormsModule } from '@angular/forms';
 
+import { EmployeeService } from './employee.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    EmployeeService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

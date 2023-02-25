@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-top-menu',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./top-menu.component.scss']
 })
 export class TopMenuComponent {
-
+	constructor(public employeeService: EmployeeService) {
+	}
 }
